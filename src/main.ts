@@ -3,8 +3,6 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 /// @ts-ignore
 import './component-loader'
-import 'bootstrap/scss/bootstrap.scss'
-import './app.css'
 import './store'
 
 Vue.config.productionTip = false

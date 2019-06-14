@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% block header %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="ie=edge" http-equiv="X-UA-Compatible">
+        <title>{{ siteName }}</title>
+
+        {{ craft.twigpack.includeCssModule("app.css", true) }}
+    </head>
+{% endblock %}
+    <body>
+        <div id="app">
+            <default-layout title="{{siteName}}">{% block body %} {% endblock %}</default-layout>
+        </div>
+        {% block webpack %}
+        {{ craft.twigpack.includeSafariNomoduleFix() }}
+        {{ craft.twigpack.includeJsModule("app.js", true) }}
+        {{ craft.twigpack.includeJsModule("chunk-vendors.js", true) }}
+        {% endblock %}
+        <div></div>
+
+    </body>
+</html>
